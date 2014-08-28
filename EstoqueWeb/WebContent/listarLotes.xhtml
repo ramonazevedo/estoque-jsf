@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	
+	<h:form>
+		<h:dataTable value="#{controleLote.lotes}" var="lote" border="1">
+			<h:column>
+				#{lote.numero}
+			</h:column>
+			<h:column>
+				#{lote.estado}
+			</h:column>
+			<h:column>
+				#{lote.dataCadastrada}			
+			</h:column>
+			<h:column>
+				#{lote.quantidadeProdutos}
+			</h:column>		
+		</h:dataTable>
+		<h:commandButton value="Novo" action="#{controleLote.novo}"/>
+	</h:form>
+
+</html>
