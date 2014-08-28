@@ -12,8 +12,8 @@
 				<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
 				<f:selectItems value="#{controleProduto.produtos}" 
 				var="produto"  
-				itemLabel="#{produto.nome}" 
-				itemValue="#{produto}" />
+				itemLabel="#{produto}" 
+				itemValue="#{produto.id}" />
 			</h:selectOneMenu>
 			<h:outputLabel value="Numero: "/>
 			<h:inputText value="#{controleLote.lote.numero}"/>
