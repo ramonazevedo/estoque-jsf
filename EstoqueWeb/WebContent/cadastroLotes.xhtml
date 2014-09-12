@@ -8,11 +8,11 @@
 
 <h:form>
 		<h:panelGrid>
-			<h:selectOneMenu value="#{controleLote.lote}" >
+			<h:selectOneMenu value="#{controleLote.produtoSelected}" >
 				<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
 				<f:selectItems value="#{controleProduto.produtos}" 
 				var="produto"  
-				itemLabel="#{produto}" 
+				itemLabel="#{produto.nome}" 
 				itemValue="#{produto.id}" />
 			</h:selectOneMenu>
 			<h:outputLabel value="Numero: "/>

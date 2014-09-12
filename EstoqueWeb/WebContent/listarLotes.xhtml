@@ -21,6 +21,16 @@
 			<h:column>
 				#{lote.quantidadeProdutos}
 			</h:column>		
+			<h:column>
+				<h:commandButton value="Deletar" action="#{controleLote.deletar}">
+					<f:setPropertyActionListener target="#{controleLote.lote}" value="#{lote}"/>
+				</h:commandButton>
+			</h:column>
+			<h:column>
+				<h:commandButton value="Editar" action="#{controleLote.editar}">
+					<f:setPropertyActionListener target="#{controleLote.lote}" value="#{lote}"/>
+				</h:commandButton>
+			</h:column>
 		</h:dataTable>
 		<h:commandButton value="Novo" action="#{controleLote.novo}"/>
 	</h:form>

@@ -11,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
-
 @Entity
 @Table(name = "lote")
 public class Lote {
@@ -28,7 +26,7 @@ public class Lote {
 	private Date dataCadastrada;
 	@Column
 	private int quantidadeProdutos;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Produto produto;
 
 	/*
